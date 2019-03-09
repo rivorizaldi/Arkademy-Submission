@@ -1,4 +1,4 @@
-# Submission Arkademy Tipe Soal C
+# Soal Bootcamp Arkademy Batch 9 Kloter 2 Tipe Soal C
 
 #### Keterangan :
 - untuk soal 1 - 5 saya menggunakan javascript dalam menyelesaikan soal yang di berikan.
