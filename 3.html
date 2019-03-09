@@ -18,18 +18,21 @@
         let equalSign = "=";
         let atSign = "@";
 
-        // for (let i = 1; i <= number; i++) {
-		//   // document.write(i);
+        for (let i = 1; i <= number; i++) {
+          if (i % 2 == 1) {
+            for (let j = 1; j < number - i; j++) {
+              document.write(equalSign);
+            }
+            for (let k = 1; k <= i; k++) {
+              document.write(atSign);
+            }
+            for (let j = 1; j < number - i; j++) {
+              document.write(equalSign);
+            }
+          }
 
-        //   for (let j = 1; j <= number - i; j++) {
-        //     document.write(equalSign);
-        //   }
-        //   for (let k = 1; k <= i; k++) {
-        //     document.write(atSign);
-        //   }
-
-        //   document.write("<br>");
-        // }
+          document.write("<br>");
+        }
         for (let i = number - 1; i >= 1; i--) {
           if (i % 2 == 1) {
             for (let j = 1; j < number - i; j++) {
@@ -38,7 +41,7 @@
             for (let k = 1; k <= i; k++) {
               document.write(atSign);
             }
-            for (let l = 1; l < number - i; l++) {
+            for (let j = 1; j < number - i; j++) {
               document.write(equalSign);
             }
           }
