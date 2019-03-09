@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Soal No 3</title>
+  </head>
+  <body>
+    <script>
+      function drawImage(number) {
+        if (typeof number != "number") {
+          return "Masukkan angka saja";
+        }
+        if (number % 2 == 0) {
+          return "Masukkan angka ganjil";
+        }
+        let equalSign = "=";
+        let atSign = "@";
+
+        // for (let i = 1; i <= number; i++) {
+		//   // document.write(i);
+
+        //   for (let j = 1; j <= number - i; j++) {
+        //     document.write(equalSign);
+        //   }
+        //   for (let k = 1; k <= i; k++) {
+        //     document.write(atSign);
+        //   }
+
+        //   document.write("<br>");
+        // }
+        for (let i = number - 1; i >= 1; i--) {
+          if (i % 2 == 1) {
+            for (let j = 1; j < number - i; j++) {
+              document.write(equalSign);
+            }
+            for (let k = 1; k <= i; k++) {
+              document.write(atSign);
+            }
+            for (let l = 1; l < number - i; l++) {
+              document.write(equalSign);
+            }
+          }
+          document.write("<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+SELECT categories.id, categories.name AS category_name, GROUP_CONCAT(products.name SEPARATOR ',') AS products FROM categories INNER JOIN products ON categories.id = products.category_id GROUP BY categories.id,categories.name

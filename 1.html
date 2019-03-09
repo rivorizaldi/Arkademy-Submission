@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Soal No 1</title>
+  </head>
+  <body>
+    <h1>Soal no 1</h1>
+    <div>
+      <p>
+        Tuliskan sebuah method/function untuk me-return biodata Anda, dengan
+        ketentuan :
+      </p>
+      <ul>
+        <li>name (String)</li>
+        <li>address (String)</li>
+        <li>hobbies (Array)</li>
+        <li>is_married (Boolean)</li>
+        <li>school (Obj) with key highSchool, and university</li>
+        <li>skills (Array of Obj)</li>
+      </ul>
+	  <p>Return value harus berupa JSON</p>
+	  
+	  <h2>Hasil jawaban lihat di console.log pada browser</h2>
+	</div>
+	
+
+    <script>
+      console.log(myBio());
+
+      function myBio() {
+        let myBio = {
+          name: "Rivo Rizaldi",
+          address: "Perumahan Jaya Maspion Permata B3 no 1, Sidoarjo",
+          hobby: ["playing video games", "watch youtube", "coding"],
+          is_married: false,
+          school: {
+            highSchool: "SMAN 18 Surabaya",
+            university: "Universitas Hasanuddin"
+          },
+          skills: [
+            {
+              hard_skills: {
+                programming_language: ["Javascript", "PHP", "Java", "Python"],
+                db: ["MySQL"],
+                framework: {
+                  CSS: ["Bootstrap, Materialize"],
+                  JS: ["JQuery"],
+                  PHP: ["Codeigniter"]
+                }
+              }
+            },
+            {
+              soft_skills: [
+                "Hard Worker",
+                "Dicipline",
+                "Responsible",
+                "On Time"
+              ]
+            }
+          ]
+        };
+
+        return JSON.stringify(myBio);
+      }
+    </script>
+  </body>
+</html>

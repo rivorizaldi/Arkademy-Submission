@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Soal No 2</title>
+  </head>
+  <body>
+    <h1>Soal no 2</h1>
+    <div>
+      <p>
+        Buatlah sebuah function untuk memverifikasi valid password dengan
+        requirements:
+      </p>
+      <ul>
+        <li>Berjumlah minimal delapan karakter</li>
+        <li>
+          Harus terdiri dari huruf kecil dan angka, karakter selain itu salah
+        </li>
+      </ul>
+      <p>
+        Contoh valid password adalah
+      </p>
+      <ul>
+        <li>qwert123</li>
+        <li>tgby7654</li>
+      </ul>
+      <p>Clue:</p>
+      <ul>
+        <li>isPasswordValid(‘tgby7654’);</li>
+      </ul>
+      <p style="margin-left:40px;">return==> true</p>
+      <ul>
+        <li>isPasswordValid(‘iuoiuuUU’);</li>
+      </ul>
+      <p style="margin-left:40px;">return==> false</p>
+    </div>
+
+    <h2>
+      Untuk Pengecekan jawaban bisa di cek melalui di console.log pada browser
+      dengan memanggil function 'isPasswordValid(argumen)' beserta parameternya
+    </h2>
+
+    <script>
+      function isPasswordValid(password) {
+        let validation = true;
+        if (password.length < 8) {
+          validation = false;
+        } else {
+          if (!hasNumber(password)) {
+            validation = false;
+          } else {
+			  if(hasUpperCase(password)){
+				  validation = false
+			  } else{
+				validation = true;
+			  }
+          }
+        }
+
+        return validation;
+      }
+
+      function hasNumber(value) {
+        return /\d/.test(value);
+      }
+
+      function hasUpperCase(value) {
+        return /[A-Z]/.test(value);
+      }
+    </script>
+  </body>
+</html>
