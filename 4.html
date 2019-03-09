@@ -7,22 +7,43 @@
     <title>Soal No 4</title>
   </head>
   <body>
+    <p>
+      Sebuah mesin penjual mandiri mempunyai stok uang kembalian 500, 1.000,
+      2.000, 5.000, 10.000, 20.000 dan 50.000. Buatlah sebuah function untuk
+      menentukan kembalian yang paling tepat, dengan paramater function total
+      belanja dan jumlah uang!
+    </p>
+    <p>
+      Misalnya: Total belanja 15.500, uang yang dimasukkan ke mesin adalah
+      50.000, sedangkan kembalian adalah 34.500, sehingga output yang dibutuhkan
+      adalah:
+    </p>
+    <ul>
+      <li>selembar 20.000</li>
+      <li>selembar 10.000</li>
+      <li>dua lembar 2000</li>
+      <li>satu koin 20.000</li>
+    </ul>
     <script>
-      function hitungKembalian(uang, stokMesin) {
-        let kembalian = stokMesin - uang;
-        if (
-          stokMesin != 500 &&
-          stokMesin != 1000 &&
-          stokMesin != 2000 &&
-          stokMesin != 5000 &&
-          stokMesin != 10000 &&
-          stokMesin != 20000 &&
-          stokMesin != 50000
-        ) {
-          return "StokMesin Harus bernilai antara 500, 1000, 2000, 5000, 10000, 20000, 50000";
-		}
-		
-		
+      function hitungKembalian(totalBelanja, uang) {
+        let kembalian = uang - totalBelanja;
+
+        let stokKembalian = [50000, 20000, 10000, 5000, 2000, 1000, 500];
+
+        if (kembalian < 0) {
+          return "uang tidak cukup";
+        }
+
+        for (let i = 0; i < stokKembalian.length; i++) {
+          let count = 0;
+          while (kembalian >= stokKembalian[i]) {
+            kembalian = kembalian - stokKembalian[i];
+            count = count + 1;
+          }
+          if (count != 0) {
+            console.log(count + " x " + stokKembalian[i]);
+          }
+        }
       }
     </script>
   </body>
